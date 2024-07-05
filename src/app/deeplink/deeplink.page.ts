@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-deeplink',
@@ -6,10 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./deeplink.page.scss'],
 })
 export class DeeplinkPage implements OnInit {
+  id:any = '';
 
-  constructor() { }
+  constructor(private route: ActivatedRoute) {}
 
   ngOnInit() {
-  }
+		this.id = this.route.snapshot.paramMap.get('id');
+	}
 
 }

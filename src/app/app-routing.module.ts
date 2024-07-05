@@ -12,7 +12,7 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
-    path: 'deeplink',
+    path: 'deeplink/:id',
     loadChildren: () => import('./deeplink/deeplink.module').then( m => m.DeeplinkPageModule)
   },
 ];
